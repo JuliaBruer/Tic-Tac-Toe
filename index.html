@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <img id="game-over-img" class="game-over-img d-none" src="img/gameOver.PNG">
+    <button id="restart-btn" class="restart-btn d-none" onclick="restart()">erneut spielen</button>
+
+    <div class="players">
+        <div id="player-1" class="player-1">
+            <img src="./img/circle.png">Player 1
+        </div>
+
+        <div id="player-2"  class="inactive-player player-2">
+            <img src="./img/cross.png">Player 2
+        </div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div id="line-0" class="horizontal-line" style="top: 60px"></div>
+        <div id="line-1" class="horizontal-line" style="top: 200px"></div>
+        <div id="line-2" class="horizontal-line" style="top: 337px"></div>
+        <div id="line-3" class="horizontal-line vertical-line" style="top: 200px; right: 144px"></div>
+        <div id="line-4" class="horizontal-line vertical-line" style="top: 200px; right: 5px"></div>
+        <div id="line-5" class="horizontal-line vertical-line" style="top: 200px; left: 135px"></div>
+        <div id="line-6" class="horizontal-line" style="top: 200px; transform: rotate(45deg) scaleX(0);"></div>
+        <div id="line-7" class="horizontal-line" style="top: 200px; transform: rotate(-45deg) scaleX(0);"></div>
+
+        <table>
+        <tr>
+            <td onclick="fillShape(0)">
+                <img id="circle-0" class="form d-none" src="./img/circle.png">
+                <img id="cross-0" class="form d-none" src="./img/cross.png">
+            </td>
+            <td onclick="fillShape(1)">
+                <img id="circle-1" class="form d-none" src="./img/circle.png">
+                <img id="cross-1" class="form d-none" src="./img/cross.png">
+            </td>
+            <td onclick="fillShape(2)">
+                <img id="circle-2" class="form d-none" src="./img/circle.png">
+                <img id="cross-2" class="form d-none" src="./img/cross.png">
+            </td>
+        </tr>
+
+        <tr>
+            <td onclick="fillShape(3)">
+                <img id="circle-3" class="form d-none" src="./img/circle.png">
+                <img id="cross-3" class="form d-none" src="./img/cross.png">
+            </td>
+            <td onclick="fillShape(4)">
+                <img id="circle-4" class="form d-none" src="./img/circle.png">
+                <img id="cross-4" class="form d-none" src="./img/cross.png">
+            </td>
+            <td onclick="fillShape(5)">
+                <img id="circle-5" class="form d-none" src="./img/circle.png">
+                <img id="cross-5" class="form d-none" src="./img/cross.png">
+            </td>
+        </tr>
+
+        <tr>
+            <td onclick="fillShape(6)">
+                <img id="circle-6" class="form d-none" src="./img/circle.png">
+                <img id="cross-6" class="form d-none" src="./img/cross.png">
+            </td>
+            <td onclick="fillShape(7)">
+                <img id="circle-7" class="form d-none" src="./img/circle.png">
+                <img id="cross-7" class="form d-none" src="./img/cross.png">
+            </td>
+            <td onclick="fillShape(8)">
+                <img id="circle-8" class="form d-none" src="./img/circle.png">
+                <img id="cross-8" class="form d-none" src="./img/cross.png">
+            </td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
