@@ -4,39 +4,52 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
+    background-size: cover;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-image: url("./img/bg.jpg");
     overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.game-over-container {
+    background-color: #031832;
+    width: 100%;
+    height: auto;
 }
 
 .game-over-img {
     position: absolute;
     left: 0;
     right: 0;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 2;
     animation: zoomIn 225ms ease-in-out;
+    object-fit: cover;
 }
 
 .restart-btn {
-    border: 1px solid #3a2c30;
+    border: 1px solid #ebdad3;
     border-radius: 20px;
-    background-color: #3a2c30;
+    background-color: #ebdad3;
     z-index: 3;
-    width: 200px;
-    height: 50px;
-    color: #ed8487;
+    width: 170px;
+    height: 43px;
+    color: #031832;
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
     position: absolute;
     bottom: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
 }
 
 .restart-btn:hover {
-    background-color: #624848;
-    border: 1px solid #624848;
+    filter: invert(100%) brightness(150%);
+    transform: scale(1.2);
 }
 
 .players {
@@ -49,6 +62,7 @@ body {
 
 .player-1, .player-2 {
     margin-top: 30px;
+    color: white;
 }
 
 .inactive-player {
@@ -80,12 +94,12 @@ td {
     position: relative;
     width: 133px;
     height: 133px;
-    border:  5px solid black;
+    border:  5px solid white;
     cursor: pointer;
 }
 
 td:hover {
-    background-color: #e2c56525;
+    background-color: rgba(255, 255, 255, 0.126);
 }
 
 table {
@@ -93,7 +107,7 @@ table {
 }
 
 table td {
-    border: 5px solid black;
+    border: 5px solid white;
 }
 
 table tr:first-child td {
@@ -129,13 +143,14 @@ table tr td:last-child {
 .horizontal-line {
     position: absolute;
     width: 415px;
-    height: 20px;
+    height: 18px;
     background-color: #e2c465;
     transform: scaleX(0);
     transform: scaleY(0);
     transition: transform 225ms ease-in-out;
     z-index: 1;
     border-radius: 10px;
+    box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
 }
 
 .vertical-line {
